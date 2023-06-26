@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/x-icon" href="d.ico" />
+    <title>Deepak | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(15, 15, 72);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(164, 164, 225);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(153, 153, 226);
+            height: 1.2px;
+            margin: 130px 100px;
+        }
+
+        .left {
+            font-size: 1.3rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        /* .leftSection .buttons{
+            padding: 10px 0;
+        } */
+        .leftSection {
+            font-size: 2rem;
+        }
+
+        .leftSection .btn {
+            padding: 6px;
+            background-color: #1e2167;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn:hover {
+            padding: 6px;
+            background-color: #575ab0;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 70vh;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection p {
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .thirdSection .box-2 {
+            display: flex;
+        }
+
+        .vertical-2 {
+            position: relative;
+            width: 150px;
+        }
+
+        .vertical-2 img {
+            position: relative;
+            top: 60px;
+            width: 110px;
+        }
+
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            background-color: white;
+            width: 1px;
+            height: 93px;
+            margin: 0 100px;
+        }
+
+        .image-top {
+            width: 50px;
+            position: relative;
+            top: -40px;
+            left: -24px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .fiveSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .fourthSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .fourthSection>div {
+            width: 30%;
+        }
+
+        .fourthSection h1 {
+            font-size: 1.9rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical     
+        }
+        input[type=email],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical     
+        }
+
+        /* input[type=send] {
+            padding: 6px;
+            background-color: #1e2167;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        input[type=send]:hover {
+            background-color: rgb(164, 164, 225);
+        } */
+
+        .left-2 .btn {
+            padding: 6px;
+            background-color: #1e2167;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .left-2 .btn:hover {
+            padding: 6px;
+            background-color: #575ab0;
+            color: white;
+            border: 1px solid white;
+            border-radius: 8px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .left-2 .btn a {
+            text-decoration: none;
+            color: white;
+        }
+        
+
+        .left-2 {
+            border-radius: 5px;
+            background-color: rgb(0, 0, 33);
+            padding: 20px;
+        }
+        .right-2 img{
+            width: 100%;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+        }
+
+        /* .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer > div{
+            width: 223px;
+        } */
+        .footerSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0;
+        }
+
+        .footerSection>div {
+            width: 30%;
+        }
+
+        .rightFooter {
+            font-size: 12px;
+        }
+        .leftFooter img {
+            width: 20%;
+            margin-top: 10px;
+        }
+
+        .leftFooter .box-3 {
+            display: flex;
+        }
+
+        .leftFooter .vertical-footer {
+            position: relative;
+            width: 150px;
+        }
+
+        .leftFooter .vertical-footer img {
+            position: relative;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                Deepak's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Deepak</span>
+                <div>and, I am a passionate</div>
+                <div><span id="element"></span></div>
+                <div class="buttons">
+                    <button class="btn"><a
+                            href="https://drive.google.com/file/d/1DmDCI6Vrx5xr5M_5qk1lUiALCWwcf5Bh/view?usp=drive_link">Download
+                            Resume</a></button>
+                    <button class="btn"><a href="https://github.com/kumardeepak85690">Visit Github</a></button>
+                </div>
+            </div>
+            <div class="rightSection"><img src="img1.png"></div>
+        </section>
+
+        <hr>
+
+        <section class="thirdSection">
+            <span class="text-gray">Introduction</span>
+            <h1>Overview.</h1>
+            <p class="text-gray">As an ambitious and hard-working B.E CSE student, I am eager to leverage my skills and
+                knowledge to contribute to a dynamic team. With hands-on experience in various projects, I have
+                developed a passion for problem-solving. Looking to secure an internship or entry-level position in a
+                challenging environment where, I can continue to learn and grow while making meaningful contributions.
+            </p>
+            <div class="box-2">
+                <div class="vertical-2">
+                    <img src="c++.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="html.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="css.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="js.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="php.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="mysql.png" alt="HTML">
+                </div>
+                <div class="vertical-2">
+                    <img src="bootstrap.png" alt="HTML">
+                </div>
+            </div>
+        </section>
+
+        <!-- <hr> -->
+
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Training & Projects.</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img src="web-developer.svg" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Web Designing
+                        <span>Training </span>
+                    </div>
+                    <div class="vertical-desc">
+                        I Completed Web Designing training from Excellence Technology.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="web-developer.svg" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Vaccination Survey Form
+                        <span>Backend</span>
+                    </div>
+                    <div class="vertical-desc">
+                        Designed a program to know the status of vaccination.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="web-developer.svg" alt="" class="image-top">
+                    <div class="vertical-title">
+                        We Can Afford
+                        <span>Frontend</span>
+                    </div>
+                    <div class="vertical-desc">
+                        Designed a platform where we can help the students to search for the Pg and flat. It saves the
+                        time and effort of the student.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="web-developer.svg" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Fashion Store
+                        <span>Frontend</span>
+                    </div>
+                    <div class="vertical-desc">
+                        Designed The Front of E-Commerce Website Fashion Store.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="web-developer.svg" alt="" class="image-top">
+                    <div class="vertical-title">
+                        Deepak's Portfolio
+                        <span>Mern Stack</span>
+                    </div>
+                    <div class="vertical-desc">
+                        Design a Portfolio to showcase My work.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fiveSection">
+            <span class="text-gray">Get in Touch</span>
+            <h1>Contact.</h1>
+        </section>
+
+        <section class="fourthSection">
+                <div class="left-2">
+                    <form action="action_page.php">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name..">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email..">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <!-- <input type="Send" value="Send"> -->
+
+                        <div class="buttons">
+                            <button class="btn">
+                                <a href="#">&nbsp;&nbsp; Send &nbsp;&nbsp; </a>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-2">
+                    <img src="contact1.jpg">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- <div class="footer">
+            <div class="footer-first">
+                <h3>Deepak's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </div>
+        </div> -->
+        <section class="footerSection">
+            <div class="leftFooter">
+                <div class="box-3">
+                    <div class="vertical-footer"><a href="https://www.linkedin.com/in/deepak-kumar85/"><img src="linkdin.png"></a></div>
+                    <div class="vertical-footer"><a href="https://twitter.com/DeepakK12286986"><img src="twitter.png"></a></div>
+                    <div class="vertical-footer"><a href="https://www.instagram.com/kumar_deepak.07/"><img src="instagram.png"></a></div>
+                </div>
+            </div>
+            <div class="rightFooter"><p> Copyright &#169; Deepak Kumar | All right reserved</p></div>
+        </section>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Web Designer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
